@@ -7,6 +7,8 @@ import {routes} from './app.routes';
 import { HideElDirective, UnderlineDirective } from './directive/master';
 import { ReverseStrPipe } from './pipes/reverse-str.pipe';
 import { AddStringPipe } from './pipes/add-string.pipe';
+import { CountryComponent } from './component/country/country.component';
+import { IndexComponent } from './component/index/index.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AddStringPipe } from './pipes/add-string.pipe';
   HideElDirective,
   UnderlineDirective,
   ReverseStrPipe,
-  AddStringPipe
+  AddStringPipe,
+  CountryComponent,
+  IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +28,6 @@ import { AddStringPipe } from './pipes/add-string.pipe';
     RouterModule.forRoot(routes),
   ],
   providers: [],
-  bootstrap: [DashboardComponent]
+  bootstrap: [IndexComponent]
 })
 export class AppModule { }
