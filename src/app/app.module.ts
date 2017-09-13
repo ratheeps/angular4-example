@@ -7,13 +7,14 @@ import { ReverseStrPipe } from './pipes/reverse-str.pipe';
 import { AddStringPipe } from './pipes/add-string.pipe';
 import { CountryService, AuthService, UserService } from './services/master';
 import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
   LoginComponent,
   IndexComponent,
   CountryComponent,
   DashboardComponent
 } from './component/master';
+import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,13 @@ import {
   ReverseStrPipe,
   AddStringPipe,
   CountryComponent,
-  IndexComponent
+  IndexComponent,
+  ControlMessagesComponent
   ],
   imports: [
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     RouterModule,
     RouterModule.forRoot(routes),
