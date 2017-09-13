@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CountryService } from '../../services/country.service';
 
 @Component({
   selector: 'app-country',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
-
-  constructor() { }
+  constructor(private countryService: CountryService) { }
 
   ngOnInit() {
+    // this.get();
   }
 
+  get() {
+    // this.countryService.get().subscribe(results => {
+    //     console.log(results);
+    // });
+  }
 }

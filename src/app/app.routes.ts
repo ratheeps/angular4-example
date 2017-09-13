@@ -3,11 +3,9 @@
 import {
   DashboardComponent,
   CountryComponent,
-  IndexComponent
 } from './component/master';
 
 export const routes: Routes = [
-    {path: '', component: IndexComponent, pathMatch: 'full'},
-    {path: 'dashboard', component: DashboardComponent},
+    {path: '', component: DashboardComponent, pathMatch: 'full'},
     {path: 'countries', component: CountryComponent},
 ];
