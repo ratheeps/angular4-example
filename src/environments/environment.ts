@@ -5,5 +5,8 @@
 
 export const environment = {
   production: false,
-  apiUrl : 'https://hub.jeylabs.com'
+  apiUrl : 'https://hub.jeylabs.com',
+  grantType: 'password',
+  clientId : '',
+  clientSecret : ''
 };
