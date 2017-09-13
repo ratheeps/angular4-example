@@ -5,6 +5,8 @@ import { LoginComponent } from './component/login/login.component';
 import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
 import { HideElDirective, UnderlineDirective } from './directive/master';
+import { ReverseStrPipe } from './pipes/reverse-str.pipe';
+import { AddStringPipe } from './pipes/add-string.pipe';
 
 
 @NgModule({
@@ -12,7 +14,9 @@ import { HideElDirective, UnderlineDirective } from './directive/master';
   DashboardComponent,
   LoginComponent,
   HideElDirective,
-  UnderlineDirective
+  UnderlineDirective,
+  ReverseStrPipe,
+  AddStringPipe
   ],
   imports: [
     BrowserModule,
