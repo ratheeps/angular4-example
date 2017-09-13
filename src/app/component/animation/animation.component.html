@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of items"
+      [@myAnimation]="item.state"
+      (click)="toggleState(item)">
+    {{item.name}}
+  </li>
+</ul>

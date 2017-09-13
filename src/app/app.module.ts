@@ -8,11 +8,13 @@ import { AddStringPipe } from './pipes/add-string.pipe';
 import { CountryService, AuthService, UserService } from './services/master';
 import {HttpModule} from '@angular/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   LoginComponent,
   IndexComponent,
   CountryComponent,
-  DashboardComponent
+  DashboardComponent,
+  AnimationComponent
 } from './component/master';
 import { ControlMessagesComponent } from './component/control-messages/control-messages.component';
 
@@ -26,7 +28,8 @@ import { ControlMessagesComponent } from './component/control-messages/control-m
   AddStringPipe,
   CountryComponent,
   IndexComponent,
-  ControlMessagesComponent
+  ControlMessagesComponent,
+  AnimationComponent
   ],
   imports: [
     HttpModule,
@@ -34,6 +37,7 @@ import { ControlMessagesComponent } from './component/control-messages/control-m
     ReactiveFormsModule,
     BrowserModule,
     RouterModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
   ],
   providers: [
