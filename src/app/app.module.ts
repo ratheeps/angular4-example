@@ -7,6 +7,7 @@ import { ReverseStrPipe } from './pipes/reverse-str.pipe';
 import { AddStringPipe } from './pipes/add-string.pipe';
 import { CountryService, AuthService, UserService } from './services/master';
 import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 import {
   LoginComponent,
   IndexComponent,
@@ -27,6 +28,7 @@ import {
   ],
   imports: [
     HttpModule,
+    FormsModule,
     BrowserModule,
     RouterModule,
     RouterModule.forRoot(routes),
