@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CountryService } from '../../services/country.service';
+import { Country } from '../../model/country';
 
 @Component({
   selector: 'app-country',
@@ -7,15 +8,16 @@ import { CountryService } from '../../services/country.service';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
+  public countries;
   constructor(private countryService: CountryService) { }
 
   ngOnInit() {
-    // this.get();
+    this.get();
   }
 
   get() {
-    // this.countryService.get().subscribe(results => {
-    //     console.log(results);
-    // });
+    this.countryService.get().subscribe(results => {
+        this.countries = results;
+    });
   }
 }

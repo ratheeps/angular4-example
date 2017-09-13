@@ -9,7 +9,7 @@ import { User } from '../model/user';
 export class UserService {
   private headers;
   private options;
-  constructor( private http: Http, private authService: AuthService) { }
+  constructor(private http: Http, private authService: AuthService) { }
 
   getUsers(): Observable<User[]> {
     this.headers = new Headers({ 'Authorization': 'Bearer ' + this.authService.token });

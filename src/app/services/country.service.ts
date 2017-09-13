@@ -6,15 +6,13 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CountryService {
-  apiUrl;
+  private apiUrl;
   constructor(private http: Http) {
     this.apiUrl = environment.apiUrl;
   }
 
   get(): Observable<any> {
-    return this.http.post(this.apiUrl + '/api/countries/', JSON.stringify({ }))
-      .map((response: Response) => {
-        return response;
-      });
+    return this.http.get('https://restcountries.eu/rest/v2/all')
+      .map((res: Response) => res.json());
   }
 }
